@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+
+}
+
+header {
+    padding: 0;
+    padding-top: 5px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("location_images/bg-image.jpg");
+    /* Set a specific height */
+    min-height: 200px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1.6;
+}
+
+.myHeading {
+    color: white;
+    padding-top: 130px;
+    font-weight: 1000;
+}
+
+.hero-image {
+    background-image: url("location_images/home.png");
+    height: 500px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
+}
+
+.card {
+    margin: 5px;
+}

@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+
+}
+.contact{
+    margin-top: 50px
+}
+header {
+    background-color: #d58564;
+}
+
+header .topbar ul li a.active:before {
+    background-color: #54678f;
+}
+
+footer {
+    bottom: 0px;
+    left: 0;
+    background-color: #d58564;
+    width: 100%;
+}
+ 
+
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    min-height: calc(100vh - 123px);
+}
+
+#contact-section {
+    background-image: url("contact_images/picture.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2%;
+
+
+}
+
+#contact-section .container h1 {
+    text-align: center;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: unset;
+    text-underline-position: under;
+    color: #331a00;
+    /*color:rgba(238,235,235);*/
+    letter-spacing: 2px;
+
+}
+
+#contact-section .container p {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3%;
+    color: #660000;
+    letter-spacing: 3px;
+}
+
+.contact-form i.fa {
+    font-size: 25px;
+    padding: 3%;
+    background-color: none;
+    border-radius: 60%;
+    margin: 2%;
+    cursor: pointer;
+    border: 2px solid #331a00;
+    color: #331a00;
+
+}
+
+.contact-form i.fa:hover {
+    cursor: pointer;
+    border: 2px solid #660000;
+    color: #660000;
+}
+
+.contact-form {
+    display: flex;
+    flex-flow: auto auto;
+    justify-content: center;
+}
+
+.wide{
+    white-space: nowrap;
+}
+
+.form-info {
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 200px;
+     color:black;
+    letter-spacing: 2px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    background-color: #ededeb;
+    color: #000;
+    outline: none;
+    border-radius: 15px;
+}
+
+input:placeholder {
+    color: red;
+}
+
+textarea {
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    background-color: #ededeb;
+    color: #000;
+    outline: none;
+    border-radius: 15px;
+}
+
+textarea::placeholder {
+    color: black;
+}
+
+#submit {
+    width: 35%;
+    background-color: #db603a;
+    padding: 4px;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 33px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 3%;
+    border: 2px solid #db603a;
+    color: #663908;
+    text-shadow : 0 1px rgb(150, 93, 93);
+    box-shadow: 1px 1px 1px #db603a;
+
+}
+
+#submit:hover {
+    border: 1px solid #660000;
+    color: #660000;
+    cursor: pointer;
+}
+
+@media(max-width:768px) {
+
+    .header {
+        font-size: 20px;
+    }
+
+    #contact-section .contact-form {
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+
+    #contact-section .container p {
+        font-size: 22px;
+    }
+
+    #contact-section .container h1 {
+        font-size: 24px;
+    }
+
+
+    #contact-section #submit {
+        width: 40%;
+    }
+}
+
+@media(max-width:1208px) {
+
+    header {
+        position: fixed;
+        background-color: #d58564;
+        border: none;
+    }
+
+    header .topbar ul {
+        float: left;
+    }
+
+    header .topbar ul li a.active:before {
+        content: '';
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: -1px;
+        background-color: #698fb5;
+    }
+
+    .hamburger .fa {
+        display: inline-block;
+    }
+
+    .topbar {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color:#d58564;
+        left: 0px;
+        top: 10px;
+        padding: 16px;
+    }
+
+    .topbar.show {
+        display: block;
+    }
+
+    header .topbar ul li {
+        display: block;
+        margin-left: 0;
+    }
+
+    header .topbar ul {
+        list-style: none;
+        margin-top: 20px;
+        padding-right: 10px;
+        margin-left: 0px;
+    }
+
+    header .topbar ul li a {
+        line-height: 42px;
+    }
+
+    header {
+        margin-top: 0px;
+    }
+
+    header .brand-name {
+        color: #ffffff;
+    }
+}

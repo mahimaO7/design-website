@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Services</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try it</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="services.css">
+    <link rel="icon" href="/F:/major other interior/sanjay_HomePageimages/icon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".hamburger .fa").click(function() {
+                document.querySelector(".topbar").classList.toggle("show");
+            })
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 20 & $(window).width() > 1190) {
+                    $('header').addClass('small');
+                    $('.hamburger .fa').css("margin-top", "10px");
+                    $('.logo img').hide(1000);
+
+                } else {
+                    $('.logo img').show(1000);
+
+                    $('header').removeClass('small');
+
+
+                }
+            });
+
+            $("a").click(function() {
+                $("a").removeClass("active");
+                $(this).addClass("active");
+                if ($(window).width() <= 1190) {
+                    document.querySelector(".topbar").classList.toggle("show");
+                }
+
+            })
+
+        })
+    </script>
+    
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Zilla+Slab:ital,wght@1,300&display=swap');
+
+        
+        body {
+            background-color: #eeeeda;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container2{
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            min-height: calc(100vh - 84px);
+        }
+
+        .headings {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url("pics/hero.png");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        .headings h1 {
+            text-align: center;
+            padding: 100px 50px;
+            letter-spacing: 7px;
+            color: #f6f6eb;
+            text-shadow: 4px 4px 2px #bb8833;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .flex {
+            padding: 0;
+            display: flex;
+            width: 100%;
+            position: center;
+            margin: 0 50px;
+        }
+
+        .flex div {
+            text-align: left;
+            height: 100%;
+            padding: 3px;
+            font-family: 'Montserrat Alternates', sans-serif;
+            font-size: 18px;
+            font-weight: 2px;
+            color: #6a2c70;
+        }
+
+        .tag {
+            font-family: 'Montserrat Alternates', sans-serif;
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: 10px;
+            margin-left: 50px;
+            color: #6a2c70;
+            letter-spacing: 1px;
+        }
+
+        li {
+            padding: 4px;
+        }
+
+        .flex2 {
+            display: flex;
+            width: 100%;
+        }
+
+        .flex2 div {
+            width: 50%;
+        }
+
+        #item1 {
+            width: 40%;
+        }
+
+        #item2 {
+            width: 60%;
+        }
+
+        @media only screen and (max-width : 930px) {
+            .flex {
+                display: block;
+                margin: 0 50px;
+            }
+
+            #item1,
+            #item2 {
+                width: 85%;
+            }
+
+            .flex2 {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width : 650px) {
+            .flex2 {
+                display: block;
+            }
+
+            .flex2 div {
+                width: 100%;
+            }
+        }
+    </style>
+    
+
+    <script type="text/javascript">
+        var i = 0; //Start point
+        var images = [];
+        var time = 1500;
+
+        // Image List
+        images[0] = 'pics/int1.png';
+        images[1] = 'pics/int2.png';
+        images[2] = 'pics/int3.png';
+        images[3] = 'pics/int4.png';
+        images[4] = 'pics/int5.png';
+        images[5] = 'pics/int6.png';
+        images[6] = 'pics/int7.png';
+
+        // Change Image
+
+        function changeImage() {
+            document.getElementById("image").src = images[i];
+
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout("changeImage()", time);
+        }
+
+        window.onload = changeImage;
+    </script>
+    
+</head>
+
+<header>
+    <div class="container1">
+        <div class="row">
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="hamburger">
+                <img class="fa" src="images/hamburger.png">
+            </div>
+            <div class="topbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="design.html"> Designs</a></li>
+                    <li><a href="location.html">Locations</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+<div class="container2">
+    <div class="headings">
+        <h1>SERVICES</h1>
+    </div>
+
+    <div class="tag">
+        <p> Our creative design team customizes a tailored design plan to suit all lifestyles, demographic regions, and budgets to resonate with each clients target market. </p>
+    </div>
+
+    <div class="flex">
+        <div style="border:4px solid rgba(240,138,93,0.7);margin:20px 0" id=item1>
+            <img id="image" width="100%" height="340px">
+        </div>
+
+        <div style="padding: 5px" id=item2>
+            <div class="flex2">
+
+                <div style="margin-top:50px;">
+                    <ul type="square">
+                        <li>Model Home Merchandising</li>
+                        <li>Sales Office Design</li>
+                        <li>Commercial Spaces</li>
+                        <li>Apartment Communities & Club House</li>
+                        <li>Residential & Spec Homes</li>
+                        <li>Project Management</li>
+                        <li>ADA Surveys</li>
+                        <li>Renderings</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top:50px;">
+                    <ul type="square">
+                        <li>Interior Furnishing Selection</li>
+                        <li>Exterior Furnishing Selection</li>
+                        <li>Hard Surface & Material Selection</li>
+                        <li>Art Procurement</li>
+                        <li>Accessory Implementation</li>
+                        <li>Architectural Critique</li>
+                        <li>FF&E Selection and Implementation</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+<footer>
+    <div id="copyrightsid" class="copyrights">
+        All Rights Reserved @ 2020 VR Designs
+    </div>
+    <div class="contactlinks">
+        <div><a href="#"><img src="footerimages/facebook.svg"></a></div>
+        <div><a href="#"><img src="footerimages/instagram.png"></a></div>
+        <div><a href="#"><img src="footerimages/youtube.svg"></a></div>
+        <div><a href="#"><img src="footerimages/linkedin.png"></a></div>
+        <div><a href="#"><img src="footerimages/twitter.png"></a></div>
+
+    </div>
+</footer>
+
+</html>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <header class="header">
+
+    </header>
+    <script type="text/javascript">
+        function Send_Data() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            if(!email || !fname) {
+                alert("Empty email or name!");
+                return;
+            }
+            console.log(fname + lname + email + message);
+            $.get(`/api/contact?first_name=${fname}&last_name=${lname}&email=${email}&msg=${message}`)
+                .done(function(e){
+                     console.log(e);alert("Success");
+                 })
+                .fail(function(e){
+                    console.error(e); alert("Failed"); 
+                });
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA_Compatible" content="ie-edge">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="csscontact.css">
+    <link rel="icon" href="images/icon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".hamburger .fa").click(function() {
+                document.querySelector(".topbar").classList.toggle("show");
+            })
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 20 & $(window).width() > 1190) {
+                    $('header').addClass('small');
+                    $('.hamburger .fa').css("margin-top", "10px");
+                    $('.logo img').hide(1000);
+
+                } else {
+                    $('.logo img').show(1000);
+
+                    $('header').removeClass('small');
+
+
+                }
+            });
+
+            $("a").click(function() {
+                $("a").removeClass("active");
+                $(this).addClass("active");
+                if ($(window).width() <= 1190) {
+                    document.querySelector(".topbar").classList.toggle("show");
+                }
+
+            })
+
+
+        })
+    </script>
+
+</head>
+<header>
+    <div class="container1">
+        <div class="row">
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="hamburger">
+                <img class="fa" src="images/hamburger.png">
+            </div>
+            <div class="topbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="design.html"> Designs </a></li>
+                    <li><a href="location.html">Locations</a></li>
+                    <li><a href="contactus.html" class="active">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <img class="image">
+    <section id="contact-section">
+        <div class="container">
+            <h1 class="contact"  style="margin-top:80px;"> Contact us</h1>
+            <h1> Interior Designing - we are unique in our own way</h1>
+            <p> Enter your details and our team will reach you soon</p>
+            <div class="contact-form">
+                <!-- 1st grid-->
+                <div>
+                    <form>
+
+                        <input type="text" id="fname" placeholder=" First Name" required>
+                        <input type="text" id="lname" placeholder=" Last Name" required>
+                        <input type="Email" id="email" placeholder=" Email id" required>
+                        <textarea name="Message" id="message" placeholder=" Enter the message" rows="5" required></textarea>
+                        <button id="submit" onclick="Send_Data()"> Submit </button>
+
+                        <br><br>
+                        <!--<button onclick
+                         ="alert('Your response has been noted ')"class="submit">Submit.</button>-->
+
+
+                    </form>
+
+                </div>
+
+                <!--2nd grid-->
+
+                <div class="wide">
+
+                    <i class=" fa fa-map-marker"></i><span class="form-info">opp ab college,hyd </span><br>
+                    <i class=" fa fa-phone"></i><span class="form-info"> +91 1234567890</span><br>
+                    <i class=" fa fa-envelope"></i><span class="form-info">design@gmail.com
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <div id="copyrightsid" class="copyrights">
+            All Rights Reserved @ 2020 VR Designs
+        </div>
+        <div class="contactlinks">
+            <div><a href="#"><img src="footerimages/facebook.svg"></a></div>
+            <div><a href="#"><img src="footerimages/instagram.png"></a></div>
+            <div><a href="#"><img src="footerimages/youtube.svg"></a></div>
+            <div><a href="#"><img src="footerimages/linkedin.png"></a></div>
+            <div><a href="#"><img src="footerimages/twitter.png"></a></div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

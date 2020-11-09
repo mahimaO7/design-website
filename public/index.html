@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/icon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".hamburger .fa").click(function() {
+                    document.querySelector(".topbar").classList.toggle("show");
+                })
+                $(window).scroll(function() {
+                    if ($(document).scrollTop() > 20 & $(window).width() > 1190) {
+                        $('header').addClass('small');
+                        $('.hamburger .fa').css("margin-top", "10px");
+                        $('.logo img').hide(1000);
+
+                    } else {
+                        $('.logo img').show(1000);
+
+                        $('header').removeClass('small');
+
+
+                    }
+                });
+
+                $("a").click(function() {
+                    $("a").removeClass("active");
+                    $(this).addClass("active");
+                    if ($(window).width() <= 1190) {
+                        document.querySelector(".topbar").classList.toggle("show");
+                    }
+
+                })
+
+            })
+        </script>
+    </head>
+    <header>
+        <div class="container1">
+            <div class="row">
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="hamburger">
+                    <img class="fa" src="images/hamburger.png">
+                </div>
+                <div class="topbar">
+                    <ul>
+                        <li><a href="index.html" class="active" id="home">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="design.html"> Designs </a></li>
+                        <li><a href="location.html">Locations</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <body>
+        <div class="hero">
+            <img src="images/hero.jpg">
+            <div class="tag-line">
+                Stylish Designs Just For You
+            </div>
+            <div class="front-line">
+                Designing the future.
+            </div>
+        </div>
+
+        <section class="intro">
+            <div class="container1">
+                <div class="heading">
+                    <h2>We Improve Your Living Style</h2>
+                </div>
+                <div class="row1">
+                    <div class="text">
+                        <div class="content">
+                            <p>We are a team of enthusiastic peeps who</p>
+                            <P>work together for only one goal:</P>
+                            <h5> &nbsp &nbsp &nbsp -Transform your living places with Joy</h5>
+                            <br>
+                            <p>And we do that by offering artful yet appropriate</p>
+                            <p>and comfortable interiors for your home and workspaces.</p>
+                            <br>
+                            <p>It is our passion to constantly pursue fresh inspiration.</p>
+                            <p>Our designers continually search for the most compelling</p>
+                            <p>design styles and highest quality of materials available.</p>
+                            <br>
+                            <p>Don’t believe us? Come visit us or call us and be assured </p>
+                            <p>of our best consultation and services.</p>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="images/info.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reason-for-choosing">
+            <div class="title-reason">
+                <h2>Reasons To Choose Interior Designers</h2>
+            </div>
+            <div class="container3">
+                <div class="box">
+                    <img src="images/gurantee.svg">
+                    <h3>5-Year Warrenty</h3>
+                    <p>All our products come with a 5-year</p>
+                    <p> warranty for any manufacturing defects.</p>
+                </div>
+                <div class=" box">
+                    <img src="images/install.jpg">
+                    <h3>45-day Installation</h3>
+                    <p>Get your chosen products installed in 45 days.</p>
+                </div>
+                <div class=" box box3">
+                    <img src="images/team.png">
+                    <h3>500+ Expert Designers</h3>
+                    <p>Create your dream home </p>
+                    <p>with the help of our top designers.</p>
+                </div>
+                <div class="box">
+                    <img src="images/homes.PNG" style="height: 150px">
+                    <h3>Homes Completed</h3>
+                    <p>We have successfully designed 500+ homes.</p>
+                </div>
+                <div class="box">
+                    <img src="images/postinsstal.png" style="height: 150px">
+                    <h3>Post-Installation Service</h3>
+                    <p>Enjoy our support and services </p>
+                    <p> from ourskilled team for 5-years.</p>
+                </div>
+                <div class="box box6">
+                    <img src="images/satisfication.jpg">
+                    <h3>100% Satisfication</h3>
+                    <p>We aims at providing 100% Satisfaction.</p>
+
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="testimonials" id="testimonialsid">
+                <h2>What our Clients say about us</h2>
+                <div class="review-out">
+                    <div class="review">
+                        <img src="images/review2.png">
+                        <p>
+                            <span>Ragu's Home</span>
+                            <br>
+                            <br>“
+                            Those who are looking for an unique design and wanted to feel proud of your home for life, don’t have second thoughts. Please call VR Designs.”
+                        </p>
+                    </div>
+                    <div class="review">
+                        <img src="images/review1.svg">
+                        <p>
+                            <span>Raju's Office</span>
+                            <br>
+                            <br>
+                            “Excellent work and on-time delivery! Very happy with the outcome! Those Whoever need Interior Designing advice and ideas Please reach out to VR Designs”</p>
+                    </div>
+                    <div class="review">
+                        <img src="images/review3.svg">
+                        <p>
+                            <span>Balaji's Home</span>
+                            <br>
+                            <br>“VR Designs is an ultimatum for those searching for the best designs and uncompromising execution for Interior Designing."</p>
+                    </div>
+                    <div class="review">
+                        <img src="images/review2.png">
+                        <p><span>ABC skin clinic</span>
+                            <br>
+                            <br>“These people delivered exactly what we needed in our clinic! We love our new space and customers feel very welcome too!”</p>
+                    </div>
+                    <div class="review">
+                        <img src="images/review3.svg">
+                        <p><span>Tanush's Home</span>
+                            <br>
+                            <br>“We are grateful for the team that managed the whole process to ensure that we got what we were looking for.
+                            The team fullfilled our dreams”</p>
+                    </div>
+                    <div class="review">
+                        <img src="images/review1.svg">
+                        <p><span>RajaRam Hospital</span>
+                            <br>
+                            <br>“We were extremely delighted with the team’s professionalism and the quality of materials that were installed!.”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="partners">
+            <div class="partners">
+                <h2>Our partners</h2>
+                <div class="partnerlogo" id="partnerlogoid">
+                    <div><img src="partners/partner1.png"></div>
+                    <div><img src="partners/partner2.jpg"></div>
+                    <div><img src="partners/partner3.png"></div>
+                    <div><img src="partners/partner4.svg"></div>
+                    <div><img src="partners/partner5.jpg"></div>
+                    <div><img src="partners/partner6.png"></div>
+                    <div><img src="partners/partner7.png"></div>
+                    <div><img src="partners/partner8.png"></div>
+                    <div><img src="partners/partner9.svg"></div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <footer>
+        <div id="copyrightsid" class="copyrights">
+            All Rights Reserved @ 2020 VR Designs
+        </div>
+        <div class="contactlinks">
+            <div><a href="#"><img src="footerimages/facebook.svg"></a></div>
+            <div><a href="#"><img src="footerimages/instagram.png"></a></div>
+            <div><a href="#"><img src="footerimages/youtube.svg"></a></div>
+            <div><a href="#"><img src="footerimages/linkedin.png"></a></div>
+            <div><a href="#"><img src="footerimages/twitter.png"></a></div>
+
+        </div>
+    </footer>
+
+    </html>

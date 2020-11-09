@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Designs Portfolio </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="design.css">
+
+        <link rel="icon" href="images/icon.ico">
+        <script>
+            $(document).ready(function() {
+                $(".hamburger .fa").click(function() {
+                    document.querySelector(".topbar").classList.toggle("show");
+                })
+                $(window).scroll(function() {
+                    if ($(document).scrollTop() > 20 & $(window).width() > 1190) {
+                        $('header').addClass('small');
+                        $('.hamburger .fa').css("margin-top", "10px");
+                        $('.logo img').hide(1000);
+
+                    } else {
+                        $('.logo img').show(1000);
+
+                        $('header').removeClass('small');
+
+
+                    }
+                });
+
+                $("a").click(function() {
+                    $("a").removeClass("active");
+                    $(this).addClass("active");
+                    if ($(window).width() <= 1190) {
+                        document.querySelector(".topbar").classList.toggle("show");
+                    }
+                })
+
+            })
+        </script>
+    </head>
+
+    <header>
+        <div class="container1">
+            <div class="row">
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+
+                <div class="box">
+                    <div class="container-2">
+                      <div class="icon"><i class="fa fa-search"></i></div>
+                      <input 
+                            type="search" 
+                            id="search" 
+                            placeholder="Search designs">
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <img class="fa" src="images/hamburger.png">
+                </div>
+
+                <div class="topbar">
+                    <ul>
+                        <li><a href="index.html" id="home">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="design.html" class="active">Designs</a></li>
+                        <li><a href="location.html">Locations</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>                    
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            const searchBar = document.getElementById("search");
+            console.log(searchBar);
+            searchBar.addEventListener("keyup", e => {
+                const searchString = e.target.value;
+                $(".find").each((i, x) => {
+                    // console.log(x);
+                    if (searchString && 
+                        $(x).text().toLowerCase().startsWith(searchString.toLowerCase())
+                    ) {
+                        $(x).addClass("match");
+                        // $('body').scrollTo(x);
+                        $('html, body').animate({
+                            scrollTop: $(x).offset().top - 200
+                        }, 500);
+                    }
+                    else {
+                        $(x).removeClass("match");
+                    }
+                })
+            });
+
+        </script>
+
+    
+    </header>
+
+    <body>
+
+        <div class="container">
+
+            <div class="imagesc" id="i1">
+                <div class="arrow left"> &lt; </div>
+                <div class="arrow right"> &gt; </div>
+                <h2 class="find">Bedroom</h2>
+                <div class="scroll">
+                    <div class="images-container" id="rail1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="imagesc" id="i2">
+                <div class="arrow left"> &lt; </div>
+                <div class="arrow right"> &gt; </div>
+                <h2 class="find">Kitchen</h2>
+                <div class="scroll">
+                    <div class="images-container" id="rail2">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="imagesc" id="i3">
+                <div class="arrow left"> &lt; </div>
+                <div class="arrow right"> &gt; </div>
+                <h2 class="find">Living Room</h2>
+                <div class="scroll">
+                    <div class="images-container" id="rail3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="imagesc" id="i4">
+                <div class="arrow left"> &lt; </div>
+                <div class="arrow right"> &gt; </div>
+                <h2 class="find">Bathroom</h2>
+                <div class="scroll">
+                    <div class="images-container" id="rail4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="imagesc" id="i5">
+                <div class="arrow left"> &lt; </div>
+                <div class="arrow right"> &gt; </div>
+                <h2 class="find">Wall designs</h2>
+                <div class="scroll">
+                    <div class="images-container" id="rail5">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="zoom-container">
+                <div class="close"> X </div>
+                <div class="arrow left"> &lt; </div>
+                <div class="arrow right"> &gt; </div>
+                <div class="zoom-img">
+                    <img>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+    <footer>
+        <div id="copyrightsid" class="copyrights">
+            All Rights Reserved @ 2020 VR Designs
+        </div>
+        <div class="contactlinks">
+            <div><a href="#"><img src="footerimages/facebook.svg"></a></div>
+            <div><a href="#"><img src="footerimages/instagram.png"></a></div>
+            <div><a href="#"><img src="footerimages/youtube.svg"></a></div>
+            <div><a href="#"><img src="footerimages/linkedin.png"></a></div>
+            <div><a href="#"><img src="footerimages/twitter.png"></a></div>
+            
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+         $( document ).ready(function() {
+            var markup = '<div class="picture"><img data-idx=${index} data-rail=${rail} src="${image}"></div>';
+
+            /* Compile the markup as a named template */
+            $.template( "designTemplate", markup );
+            
+            $(".zoom-container").hide();
+            var rail = "rail1";
+            var zoomIndex = 0;
+            var images1 = [
+                {image: "designs/bedroom/bed.jpg"},
+                {image: "designs/bedroom/bed2.jpg"},
+                {image: "designs/bedroom/bed3.jpg"},
+                {image: "designs/bedroom/bed4.jpg"},
+                {image: "designs/bedroom/bed5.jpg"},
+                {image: "designs/bedroom/bed6.jpg"},
+                {image: "designs/bedroom/bed8.jpg"},
+                {image: "designs/bedroom/bed9.jpg"},
+                {image: "designs/bedroom/bed10.jpg"},
+                {image: "designs/bedroom/bed11.jpg"},
+                {image: "designs/bedroom/bed12.jpg"},
+                {image: "designs/bedroom/bed13.jpg"}
+            ];
+            images1 = images1.map((v, i)=> ({rail: "rail1", index: i, ...v}));
+
+            /* Render the template with the movies data and insert
+            the rendered HTML under the "movieList" element */
+            $.tmpl( "designTemplate", images1 )
+            .appendTo( "#rail1" );
+
+            var images2 = [
+                {image: "designs/kitchen/kitchen.png"},
+                {image: "designs/kitchen/kitchen1.jpg"},
+                {image: "designs/kitchen/kitchen2.jpg"},
+                {image: "designs/kitchen/kitchen3.jpg"},
+                {image: "designs/kitchen/kitchen4.jpg"},
+                {image: "designs/kitchen/kitchen5.jpg"},
+                {image: "designs/kitchen/kitchen6.jpg"},
+                {image: "designs/kitchen/kitchen7.jpg"},
+                {image: "designs/kitchen/kitchen8.jpg"},
+                {image: "designs/kitchen/kitchen10.jpg"}
+            ];
+            images2 = images2.map((v, i)=> ({rail: "rail2", index: i, ...v}));
+
+            /* Render the template with the movies data and insert
+            the rendered HTML under the "movieList" element */
+            $.tmpl( "designTemplate", images2 )
+            .appendTo( "#rail2" );
+
+            var images3 = [
+                {image: "designs/living/1.jpg"},
+                {image: "designs/living/3.jpg"},
+                {image: "designs/living/4.jpg"},
+                {image: "designs/living/6.jpg"},
+                {image: "designs/living/7.jpg"},
+                {image: "designs/living/8.jpg"},
+                {image: "designs/living/9.jpg"},
+                {image: "designs/living/10.jpg"},
+                {image: "designs/living/11.jpg"},
+                {image: "designs/living/16.jpg"},
+                {image: "designs/living/17.jpg"},
+                {image: "designs/living/18.jpg"},
+                {image: "designs/living/19.jpg"},
+                {image: "designs/living/20.jpg"},
+                {image: "designs/living/21.jpg"},
+                       
+            ];
+            images3 = images3.map((v, i)=> ({rail: "rail3", index: i, ...v}));
+
+            /* Render the template with the movies data and insert
+            the rendered HTML under the "movieList" element */
+            $.tmpl( "designTemplate", images3 )
+            .appendTo( "#rail3" );
+
+            var images4 = [
+                {image: "designs/bathroom/1.jpg"},
+                {image: "designs/bathroom/2.jpeg"},
+                {image: "designs/bathroom/3.jpeg"},
+                {image: "designs/bathroom/4.jpeg"},
+                {image: "designs/bathroom/5.jpeg"},
+                {image: "designs/bathroom/6.jpeg"},
+                {image: "designs/bathroom/7.jpeg"},
+                {image: "designs/bathroom/8.jpeg"},
+                {image: "designs/bathroom/9.jpeg"},
+                {image: "designs/bathroom/10.jpeg"},
+                {image: "designs/bathroom/11.jpeg"},
+                {image: "designs/bathroom/12.jpeg"},
+
+               
+            ];
+            images4 = images4.map((v, i)=> ({rail: "rail4", index: i, ...v}));
+
+            /* Render the template with the movies data and insert
+            the rendered HTML under the "movieList" element */
+            $.tmpl( "designTemplate", images4 )
+            .appendTo( "#rail4" );
+
+            var images5 = [
+                {image: "designs/walls/0.jpeg"},
+                {image: "designs/walls/1.jpg"},
+                {image: "designs/walls/2.jpg"},
+                {image: "designs/walls/3.jpeg"},
+                {image: "designs/walls/4.jpg"},
+                {image: "designs/walls/5.jpeg"},
+                {image: "designs/walls/6.jpg"},
+                {image: "designs/walls/7.jpg"},
+                {image: "designs/walls/8.jpg"},
+                {image: "designs/walls/9.jpg"},
+                {image: "designs/walls/10.jpg"},
+                {image: "designs/walls/11.jpg"},
+                {image: "designs/walls/12.jpg"},
+                {image: "designs/walls/13.jpeg"},
+                {image: "designs/walls/14.jpg"},
+                {image: "designs/walls/15.jpeg"},
+                {image: "designs/walls/18.jpg"},
+                {image: "designs/walls/19.jpg"}                       
+            ];
+            images5 = images5.map((v, i)=> ({rail: "rail5", index: i, ...v}));
+
+            /* Render the template with the movies data and insert
+            the rendered HTML under the "movieList" element */
+            $.tmpl( "designTemplate", images5 )
+            .appendTo( "#rail5" );
+
+            $("#i1>.arrow.right").on("click",function()
+            {
+                var scr= $("#i1>div.scroll").scrollLeft();
+                $("#i1>div.scroll").scrollLeft(scr+250);
+            });
+
+            $("#i1>.arrow.left").on("click",function()
+            {
+                var scr= $("#i1>div.scroll").scrollLeft();
+                $("#i1>div.scroll").scrollLeft(scr-250);
+            });
+
+
+
+            $("#i2>.arrow.right").on("click",function()
+            {
+                var scr= $("#i2>div.scroll").scrollLeft();
+                $("#i2>div.scroll").scrollLeft(scr+250);
+            });
+
+            $("#i2>.arrow.left").on("click",function()
+            {
+                var scr= $("#i2>div.scroll").scrollLeft();
+                $("#i2>div.scroll").scrollLeft(scr-250);
+            });
+
+
+
+            $("#i3>.arrow.right").on("click",function()
+            {
+                var scr= $("#i3>div.scroll").scrollLeft();
+                $("#i3>div.scroll").scrollLeft(scr+250);
+            });
+
+            $("#i3>.arrow.left").on("click",function()
+            {
+                var scr= $("#i3>div.scroll").scrollLeft();
+                $("#i3>div.scroll").scrollLeft(scr-250);
+            });
+
+
+
+            $("#i4>.arrow.right").on("click",function()
+            {
+                var scr= $("#i4>div.scroll").scrollLeft();
+                $("#i4>div.scroll").scrollLeft(scr+250);
+            });
+
+            $("#i4>.arrow.left").on("click",function()
+            {
+                var scr= $("#i4>div.scroll").scrollLeft();
+                $("#i4>div.scroll").scrollLeft(scr-250);
+            });
+
+
+            $("#i5>.arrow.right").on("click",function()
+            {
+                var scr= $("#i5>div.scroll").scrollLeft();
+                $("#i5>div.scroll").scrollLeft(scr+250);
+            });
+
+            $("#i5>.arrow.left").on("click",function()
+            {
+                var scr= $("#i5>div.scroll").scrollLeft();
+                $("#i5>div.scroll").scrollLeft(scr-250);
+            });
+
+
+            $(".close").on("click",function()
+            {
+                $(".zoom-container").hide();
+            });
+
+            $(".picture").on("click",function(e)
+            {
+                console.log(e);
+                console.log(e.target.attributes);
+                zoomIndex = parseInt(e.target.attributes["data-idx"].value, 0);
+                rail = e.target.attributes["data-rail"].value;
+                $(".zoom-container img").attr("src", e.target.currentSrc);
+                
+                $(".zoom-container").show();
+            });
+
+            var images = {
+                    rail1: images1,
+                    rail2: images2,
+                    rail3: images3,
+                    rail4: images4,
+                    rail5: images5
+            };
+
+            $(".zoom-container>.arrow.right").on("click",function()
+            {
+                console.log(zoomIndex, rail);
+                
+                var newIndex = (zoomIndex+1)%images[rail].length;
+                console.log(newIndex);
+                var srcUrl = images[rail][newIndex].image;
+                console.log(srcUrl);
+                $(".zoom-container img").attr("src", srcUrl);
+                zoomIndex = newIndex;
+
+            });
+
+            $(".zoom-container>.arrow.left").on("click",function()
+            {
+                console.log(zoomIndex, rail);
+                
+                var newIndex = (zoomIndex-1);
+                if(newIndex < 0)
+                {
+                    newIndex = images[rail].length-1;
+                }
+                console.log(newIndex);
+                var srcUrl = images[rail][newIndex].image;
+                console.log(srcUrl);
+                $(".zoom-container img").attr("src", srcUrl);
+                zoomIndex = newIndex;
+
+            });
+
+        });
+    </script>
+
+</html>

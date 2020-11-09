@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>
+        About Us
+    </title>
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".hamburger .fa").click(function() {
+                document.querySelector(".topbar").classList.toggle("show");
+            })
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 20 & $(window).width() > 1190) {
+                    $('header').addClass('small');
+                    $('.hamburger .fa').css("margin-top", "10px");
+                    $('.logo img').hide(1000);
+
+                } else {
+                    $('.logo img').show(1000);
+
+                    $('header').removeClass('small');
+
+
+                }
+            });
+            $("a").click(function() {
+                $("a").removeClass("active");
+                $(this).addClass("active");
+                if ($(window).width() <= 1190) {
+                    document.querySelector(".topbar").classList.toggle("show");
+                }
+
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container1">
+            <div class="row">
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="hamburger">
+                    <img class="fa" src="images/hamburger.png">
+                </div>
+                <div class="topbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html" class="active">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="design.html"> Designs </a></li>
+                        <li><a href="location.html">Locations</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="about-section">
+            <div class="inner-container">
+                <h1 style="margin-top:50px;">
+                    About Us
+                </h1>
+                <p class="text">
+                    VR Designs is a full service design and merchandising firm. We partner with builders and developers, collaborating to make each project distinct and notable. We collectively work with architects, contractors, landscape designers and marketing continually throughout the duration of the project to ensure succe
+                </p>
+            </div>
+        </div>
+        <div class="design">
+            <h1>
+                Exclusive Designs and project Repesentations
+            </h1>
+            <div class="image-gallery">
+                <img src="about_images/a1.png">
+                <img src="about_images/a2.png">
+                <img src="about_images/a3.png">
+                <img src="about_images/a4.png">
+                <img src="about_images/a5.png">
+                <img src="about_images/a6.png">
+                <img src="about_images/a7.png">
+                <img src="about_images/a8.png">
+                <img src="about_images/a9.png">
+                <img src="about_images/a10.png">
+                <img src="about_images/a11.png">
+                <img src="about_images/a12.png">
+                <img src="about_images/a13.png">
+                <img src="about_images/a14.png">
+                <img src="about_images/a15.png">
+                <img src="about_images/a16.png">
+                <img src="about_images/a17.png">
+                <img src="about_images/a18.png">
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div id="copyrightsid" class="copyrights">
+            All Rights Reserved @ 2020 VR Designs
+        </div>
+        <div class="contactlinks">
+            <div><a href="#"><img src="footerimages/facebook.svg"></a></div>
+            <div><a href="#"><img src="footerimages/instagram.png"></a></div>
+            <div><a href="#"><img src="footerimages/youtube.svg"></a></div>
+            <div><a href="#"><img src="footerimages/linkedin.png"></a></div>
+            <div><a href="#"><img src="footerimages/twitter.png"></a></div>
+        </div>
+    </footer>
+</body>
+
+</html>

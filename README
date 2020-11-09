@@ -4,5 +4,5 @@ install mysql
 
 run command `npm install` to install mysql plugin
 create database in mysql: CREATE DATABASE verzeo;
-run command npm start to start the server
+run command `npm start` to start the server
 open site at localhost:3000
